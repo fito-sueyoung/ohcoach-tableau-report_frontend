@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>OhCoach Analytics - Match Report</title>
+    <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="/css/style.css">
+
+    <!-- Access the API & Load your JavaScript -->
+    <script type='text/javascript'
+            src='http://public.tableau.com/javascripts/api/tableau-2.min.js'></script>
+    <script type='text/javascript' src='js/tableau_interaction_action.js'></script>
+    <script type='text/javascript' src='js/common.js'></script>
+    <script type='text/javascript' src='js/header.js'></script>
+</head>
+
+<body onload="initViz()">
+
+<header id="header"></header>
+
+<main class="content-wrapper">
+    <!-- Create an empty div to put the viz -->
+    <div class="tableau-wrapper" id="tableau_content"></div>
+</main>
+
+<footer id="footer"></footer>
+
+</body>
+</html>
+
+<script type='text/javascript'>
+
+    document.addEventListener("DOMContentLoaded", function() {
+        loadHeader();
+        loadFooter();
+    });
+
+    function loadHeader(){
+        fetch("header.html")
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(body) {
+                document.querySelector('#header').innerHTML = body;
+                setMenuEventListener();
+            });
+    }
+
+    function loadFooter(){
+        fetch("footer.html")
+            .then(function(response) {
+                return response.text();
+            })
+            .then(function(body) {
+                document.querySelector('#footer').innerHTML = body;
+            });
+    }
+</script>
+

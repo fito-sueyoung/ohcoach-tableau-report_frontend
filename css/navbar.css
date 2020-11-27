@@ -1,0 +1,25 @@
+.navbar { height: 80px; padding-left: 40px; padding-right: 40px; padding-top: 0px; padding-bottom: 0px; }
+.navbar .navbar-collapse { height: inherit; }
+.navbar .navbar-nav { height: inherit; }
+.navbar-logo { max-height: 64px; margin-right: 40px; }
+.navbar-brand { font-family: 'Helvetica'; font-size: x-large; font-weight: bold; }
+.nav-item { margin-left: 40px; }
+.navbar-nav > a:after { bottom: 100% }
+.navbar-nav > .active a { font-weight: bold; }
+.navbar-nav .nav-item { display: grid; align-content: center; }
+.navbar-nav .nav-item .dropdown-menu { margin-top: 0px; }
+.navbar-nav .nav-item .dropdown-menu a { font-weight: normal; }
+.navbar-nav .nav-item .dropdown-menu > .active a { color: black; font-weight: bold; }
+.dropdown-menu { colop: var(--primary-bg-color); }
+.dropdown-item { color: darkgray; }
+.dropdown-item:active { color: black; background-color: transparent; }
+
+.navbar-dark .navbar-nav .nav-item { color: var(--primary-txt-color-light); }
+.navbar-dark .navbar-nav .nav-item:hover { color: var(--primary-txt-color); }
+.navbar-dark .navbar-nav .nav-item:focus { color: var(--primary-txt-color); }
+
+/* For font-awesome Icon */
+.nav-icon { margin-top: 2px; }
+.navbar-nav i { font-size: 1.2em; }
+
+

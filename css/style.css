@@ -1,0 +1,37 @@
+@import url(http://fonts.googleapis.com/earlyaccess/nanumgothic.css);
+
+body {font-family: 'NanumGothic', 'serif';}
+
+main {min-height: 1100px;}
+main::after {
+    content: '';
+    display: block;
+}
+footer { background-color: white; position: fixed; bottom: 0; width: 100%; }
+
+:root {
+    --primary-bg-color: #80CBB7;
+    --primary-bg-color-light: #E0F2ED;
+    --primary-txt-color: #fff;
+    --primary-txt-color-light: rgba(255,255,255,.7);
+    --highlight-txt-color: #80CBB7;
+}
+
+.fg-primary { color: var(--primary-bg-color) !important; }
+.bg-primary { background-color: var(--primary-bg-color) !important; }
+.text-primary { color: var(--primary-txt-color) !important; }
+.text-highlight { color: var(--highlight-txt-color) !important; }
+.text-light { color: darkgray !important; }
+
+.content-wrapper { overflow-x: auto; padding-top: 80px; padding-bottom: 80px; }
+
+.tableau-wrapper { display: table; margin-left: auto; margin-right: auto; }
+
+.hidden {
+    visibility: hidden !important;
+    display: none !important;
+}
+
+.text-bold { font-weight: bold; }
+
+.align-center { display: grid; align-items: center; text-align: center; }

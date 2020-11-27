@@ -1,0 +1,10 @@
+.btn-fito-primary {
+    background-color: var(--primary-bg-color);
+    border-color: var(--primary-bg-color);
+    color: var(--primary-txt-color);
+}
+.btn-fito-primary:hover, .btn-fito-primary:focus, .btn-fito-primary:active {
+    background-color: var(--primary-bg-color);
+    border-color: var(--primary-bg-color);
+    color: var(--primary-txt-color);
+}

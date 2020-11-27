@@ -1,0 +1,15 @@
+version: '3'
+services:
+  nginx:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    environment:
+    - ENV_MODE=localhost
+    container_name: ohcoach-tableau-report
+    restart: always
+    ports:
+      - "80:80"
+      - "443:443"
+    volumes:
+      - .:/app:rw
